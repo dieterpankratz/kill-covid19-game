@@ -1,6 +1,10 @@
 function getSurvivedInterval() {
     Date.now() + 1000;
 }
+
+function getGoneIntervall() {
+    Date.now() + Math.floor(Math.random() * 18000) + 2000;
+}
 const covids = [
     {
         status: 'survived',
@@ -59,7 +63,12 @@ function getNextStatus (covid) {
         case 'survived':
             covid.next = getSurvivedInterval();
             covid.status = 'leaving';
-            covid.node.src = './images/covid-leaving.png';
+            covid.node.src = './images/covid19-leaving.png';
+            break;
+        case 'leaving':
+            covid.next = getGoneIntervall();
+            covid.status = 'gone';
+            covid.node.children[0].classList.add('gone');
             break;
     }
 }

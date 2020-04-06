@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    cursor: url(./images/cursor.png), default;
+    background-color: #C0C86D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+.background {
+    display: flex;
+    flex-wrap: wrap ;
+    background-image: url(./images/background.png);
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1080px;
+    justify-content: center;
+    align-items: center;
+}
+.hole {
+    background-color: black;
+    border-radius: 50%;
+    overflow: visible;
+    width: 270px;;
+    height: 270px;;
+}
+.hole-container {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.covid19 {
+    position: relative;
+    right: 20px;
+    bottom: 22px;
+}
+.alive {
+    cursor: url(./images/crosshair-cursor.png), default;
+}
+.gone {
+    display: none;
+}

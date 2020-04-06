@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-body {
+.game-field {
     cursor: url(./images/cursor.png), default;
     background-color: #C0C86D;
     display: flex;
@@ -42,6 +42,12 @@ body {
 .alive {
     cursor: url(./images/crosshair-cursor.png), default;
 }
-.gone {
+.gone,
+.hide {
     display: none;
+}
+.survived {
+    position: relative;
+    left: 20px;
+    bottom: 22px;
 }

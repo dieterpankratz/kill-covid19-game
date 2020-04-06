@@ -63,13 +63,19 @@ function getNextStatus (covid) {
         case 'survived':
             covid.next = getSurvivedInterval();
             covid.status = 'leaving';
-            covid.node.src = './images/covid19-leaving.png';
+            covid.node.children[0].src = './images/covid19-leaving.png';
             break;
         case 'leaving':
             covid.next = getGoneIntervall();
             covid.status = 'gone';
             covid.node.children[0].classList.add('gone');
             break;
+        case 'gone':
+            covid.next = getAliveIntervall();
+            covid.status = 'alive';
+            covid.node.children[0].classList.add('alive');
+            covid.node.children[0].classList.remove('gone');
+            covid.node.children[0].src = './images/covid19.png';
     }
 }
 let runAgainAt = Date.now + 100;
